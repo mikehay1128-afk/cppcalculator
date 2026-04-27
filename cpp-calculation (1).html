@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPP Benefits Calculator 2026 — Estimate Your Canada Pension Plan Payment | cppcalculation.ca</title>
+<meta name="description" content="Free CPP benefits calculator for Canadians. Estimate your Canada Pension Plan monthly payment at age 60, 65 or 70. Compare scenarios, see your breakeven age and plan your retirement with confidence.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="CPP Benefits Calculator 2026 | cppcalculation.ca">
+<meta property="og:description" content="Estimate your Canada Pension Plan monthly payment at 60, 65 or 70. Free Canadian retirement calculator with breakeven analysis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.cppcalculation.ca/">
+<link rel="canonical" href="https://www.cppcalculation.ca/" />
+
+<!-- FAQ + WebApplication JSON-LD SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it better to take CPP at 60 or 65?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Taking CPP at 60 gives you more payments over your lifetime but each payment is reduced by 0.6% for every month before your 65th birthday — a maximum reduction of 36% if you start at exactly 60. Taking CPP at 65 gives you the standard amount with no penalty or bonus. The right choice depends on your health, other retirement income, and whether you need the money now. If you are in poor health or need income urgently, taking CPP early often makes sense. If you are healthy and can afford to wait, deferring often results in more total lifetime income."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much CPP will I get at 65 in Canada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The maximum CPP retirement benefit at age 65 in 2026 is $1,433.00 per month. However, most Canadians receive significantly less than the maximum because the maximum requires contributing the maximum amount to CPP for at least 39 years. The average CPP payment in 2026 is approximately $808 per month. Your actual amount depends on your earnings history and how many years you contributed to CPP. You can get your personal CPP estimate by logging into My Service Canada Account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the CPP deferral breakeven age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The CPP deferral breakeven age is the age at which waiting to take CPP later results in more total lifetime income than taking it earlier. For taking CPP at 70 vs 65, the breakeven age is typically around age 82 to 83. This means if you live past approximately age 83, deferring CPP to age 70 results in more total lifetime income. If you pass away before the breakeven age, you would have received more total income by taking CPP earlier. Your exact breakeven depends on your specific CPP amounts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the CPP early retirement penalty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you take CPP before age 65, your benefit is permanently reduced by 0.6% for each month you receive it before your 65th birthday. This means if you start CPP at age 60, your monthly benefit is reduced by 36% (0.6% x 60 months) for life. At age 62, the reduction is 21.6%. At age 64, the reduction is 7.2%. This reduction is permanent and does not go away when you turn 65."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the CPP deferral bonus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you delay taking CPP past age 65, your benefit increases by 0.7% for each month you wait after your 65th birthday. If you defer to age 70 (the maximum deferral age), your CPP benefit increases by 42% (0.7% x 60 months) permanently for life. This increase is on top of your standard age-65 amount, making deferral a powerful strategy for Canadians who are healthy and have other retirement income to draw from in the meantime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many years do I need to contribute to CPP to get the maximum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To receive the maximum CPP retirement benefit, you generally need to have contributed the maximum amount to CPP for at least 39 years between ages 18 and 65. Years where you had low or no earnings, were raising children under 7, or had a disability are handled through dropout provisions that can improve your average. Most Canadians do not receive the maximum CPP because they had some years of lower earnings, part-time work, or years outside the workforce."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I collect CPP and still work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If you are between 60 and 65 and collecting CPP, you must continue making CPP contributions if you are still working. After age 65, CPP contributions while working are optional — you can choose to make Post-Retirement Benefit (PRB) contributions which will increase your monthly CPP slightly each year. After age 70, you can no longer make CPP contributions even if you are still working."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CPP Benefits Calculator",
+  "url": "https://www.cppcalculation.ca/",
+  "description": "Free Canadian CPP benefits estimator. Calculate your Canada Pension Plan monthly payment at age 60, 65 or 70 with breakeven analysis.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" }
+}
+</script>
+
+<!-- ============================================================
+     GOOGLE ADSENSE AUTO ADS
+     Replace BOTH instances of ca-pub-XXXXXXXXXXXXXXXX below
+     with your publisher ID from your AdSense dashboard.
+     Google automatically places ads in the best spots on the page.
+     ============================================================ -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX", enable_page_level_ads: true });</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #1B2A4A;
+    --navy-light: #243459;
+    --navy-dark: #111D33;
+    --gold: #C9A84C;
+    --gold-light: #DFC07A;
+    --gold-muted: rgba(201,168,76,0.12);
+    --gold-border: rgba(201,168,76,0.3);
+    --cream: #FAF7F2;
+    --cream-dark: #F0EBE1;
+    --white: #ffffff;
+    --text: #1A1A2E;
+    --grey: #6B7280;
+    --grey-border: #E2DDD5;
+    --danger: #B91C1C;
+    --danger-bg: #FEF2F2;
+    --warning: #B45309;
+    --warning-bg: #FFFBEB;
+    --success: #166534;
+    --success-bg: #F0FDF4;
+    --radius: 10px;
+    --radius-lg: 18px;
+    --shadow: 0 4px 20px rgba(27,42,74,0.09);
+    --shadow-lg: 0 12px 48px rgba(27,42,74,0.15);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--navy-dark);
+    border-bottom: 2px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 24px;
+  }
+  .header-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .logo span { color: var(--gold); }
+  .header-pill {
+    background: var(--gold-muted);
+    border: 1px solid var(--gold-border);
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* ── DISCLOSURE ── */
+  .disclosure-bar {
+    background: #0F1929;
+    padding: 7px 24px;
+    text-align: center;
+  }
+  .disclosure-bar p {
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  .disclosure-bar a { color: var(--gold-light); text-decoration: none; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy-dark);
+    padding: 60px 24px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.05) 0%, transparent 50%);
+  }
+  .hero-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold-muted);
+    border: 1px solid var(--gold-border);
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 5.5vw, 52px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.12;
+    margin-bottom: 18px;
+    letter-spacing: -0.3px;
+  }
+  .hero h1 em { font-style: normal; color: var(--gold); }
+  .hero-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.6);
+    max-width: 580px;
+    margin: 0 auto 32px;
+    font-weight: 300;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .hero-stat {
+    flex: 1;
+    min-width: 130px;
+    padding: 18px 20px;
+    border-right: 1px solid var(--gold-border);
+    background: rgba(255,255,255,0.03);
+  }
+  .hero-stat:last-child { border-right: none; }
+  .hero-stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .hero-stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── LAYOUT ── */
+  .main-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 32px;
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .main-wrap { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+  }
+
+  /* ── CALC CARD ── */
+  .calc-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    border: 1px solid var(--grey-border);
+  }
+  .calc-header {
+    background: var(--navy);
+    padding: 26px 30px;
+    border-bottom: 2px solid var(--gold);
+  }
+  .calc-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .calc-header p { font-size: 13px; color: rgba(255,255,255,0.55); }
+  .calc-body { padding: 30px; }
+
+  /* ── FORM ── */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 540px) { .form-grid { grid-template-columns: 1fr; } }
+  .form-group { display: flex; flex-direction: column; gap: 7px; }
+  .form-group.full { grid-column: 1 / -1; }
+
+  label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  label .note {
+    font-weight: 400;
+    text-transform: none;
+    color: var(--grey);
+    font-size: 11px;
+    letter-spacing: 0;
+    margin-left: 4px;
+  }
+  input, select {
+    padding: 12px 15px;
+    border: 1.5px solid var(--grey-border);
+    border-radius: var(--radius);
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    width: 100%;
+    appearance: auto;
+  }
+  input:focus, select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px var(--gold-muted);
+    background: var(--white);
+  }
+  input::placeholder { color: #c0bab0; }
+
+  .prefix-wrap { position: relative; }
+  .prefix-wrap .pfx {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--grey);
+    font-size: 15px;
+    pointer-events: none;
+  }
+  .prefix-wrap input { padding-left: 26px; }
+
+  .divider {
+    border: none;
+    border-top: 1.5px dashed var(--grey-border);
+    margin: 24px 0;
+  }
+  .section-lbl {
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--grey);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-lbl::after { content: ''; flex: 1; height: 1px; background: var(--grey-border); }
+
+  /* ── SCENARIO TOGGLE ── */
+  .scenario-toggle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .scenario-btn {
+    padding: 12px 8px;
+    border: 1.5px solid var(--grey-border);
+    border-radius: var(--radius);
+    background: var(--cream);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+    font-family: 'Lato', sans-serif;
+  }
+  .scenario-btn:hover { border-color: var(--gold); }
+  .scenario-btn.active { border-color: var(--gold); background: var(--gold-muted); }
+  .scenario-btn .sb-age {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+    display: block;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+  .scenario-btn.active .sb-age { color: var(--gold); }
+  .scenario-btn .sb-label { font-size: 11px; color: var(--grey); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  .scenario-btn .sb-change { font-size: 12px; font-weight: 700; margin-top: 4px; display: block; }
+  .scenario-btn.early .sb-change { color: var(--danger); }
+  .scenario-btn.standard .sb-change { color: var(--success); }
+  .scenario-btn.defer .sb-change { color: #1D4ED8; }
+
+  /* ── BUTTON ── */
+  .calc-btn {
+    width: 100%;
+    padding: 17px;
+    background: var(--navy);
+    color: var(--white);
+    border: 2px solid var(--navy);
+    border-radius: var(--radius);
+    font-size: 16px;
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+  }
+  .calc-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 3px;
+    background: var(--gold);
+  }
+  .calc-btn:hover { background: var(--navy-light); transform: translateY(-1px); box-shadow: var(--shadow); }
+  .reset-btn {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: var(--grey);
+    border: 1.5px solid var(--grey-border);
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s;
+  }
+  .reset-btn:hover { border-color: var(--danger); color: var(--danger); }
+
+  /* ── RESULTS ── */
+  .results-wrap { display: none; margin-top: 30px; }
+  .results-wrap.visible { display: block; animation: fadeUp 0.4s ease; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Three scenario cards */
+  .scenario-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 560px) { .scenario-cards { grid-template-columns: 1fr; } }
+
+  .scenario-card {
+    border-radius: var(--radius);
+    padding: 20px 18px;
+    border: 1.5px solid var(--grey-border);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  .scenario-card:hover { transform: translateY(-2px); }
+  .scenario-card.best {
+    border-color: var(--gold);
+    background: var(--navy-dark);
+  }
+  .scenario-card .sc-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: var(--gold-muted);
+    color: var(--gold);
+    border: 1px solid var(--gold-border);
+  }
+  .scenario-card.best .sc-badge { background: rgba(201,168,76,0.2); color: var(--gold-light); }
+  .scenario-card .sc-age {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--navy);
+    display: block;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+  .scenario-card.best .sc-age { color: var(--gold); }
+  .scenario-card .sc-age-label { font-size: 11px; color: var(--grey); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; margin-bottom: 14px; display: block; }
+  .scenario-card.best .sc-age-label { color: rgba(255,255,255,0.45); }
+  .scenario-card .sc-monthly {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    display: block;
+  }
+  .scenario-card.best .sc-monthly { color: var(--white); }
+  .scenario-card .sc-monthly-label { font-size: 11px; color: var(--grey); margin-bottom: 12px; display: block; }
+  .scenario-card.best .sc-monthly-label { color: rgba(255,255,255,0.45); }
+  .scenario-card .sc-annual { font-size: 13px; font-weight: 700; color: var(--navy); }
+  .scenario-card.best .sc-annual { color: var(--gold-light); }
+  .sc-change-pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    margin-top: 8px;
+  }
+  .sc-change-pill.red { background: var(--danger-bg); color: var(--danger); }
+  .sc-change-pill.green { background: var(--success-bg); color: var(--success); }
+  .sc-change-pill.blue { background: #EFF6FF; color: #1D4ED8; }
+  .sc-change-pill.neutral { background: var(--cream-dark); color: var(--navy); }
+
+  /* Payout comparison table */
+  .payout-section { margin-bottom: 24px; }
+  .payout-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+  .payout-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .payout-table th {
+    background: var(--navy);
+    color: rgba(255,255,255,0.75);
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .payout-table th:first-child { border-radius: 8px 0 0 0; }
+  .payout-table th:last-child { border-radius: 0 8px 0 0; }
+  .payout-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--grey-border);
+    color: var(--text);
+    font-weight: 400;
+  }
+  .payout-table tr:last-child td { border-bottom: none; }
+  .payout-table tr:nth-child(even) td { background: var(--cream); }
+  .payout-table .winner { color: var(--success); font-weight: 700; }
+  .payout-table .highlight-col { font-weight: 700; color: var(--navy); }
+
+  /* Breakeven box */
+  .breakeven-box {
+    background: var(--navy-dark);
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .breakeven-icon {
+    font-size: 36px;
+    flex-shrink: 0;
+  }
+  .breakeven-text h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .breakeven-text p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+  /* Alerts */
+  .alert {
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    font-size: 13px;
+    display: none;
+    margin-bottom: 16px;
+    line-height: 1.55;
+  }
+  .alert.show { display: block; }
+  .alert-info { background: #EFF6FF; border: 1.5px solid #BFDBFE; color: #1E40AF; }
+
+  /* ── AD WRAPPER ── */
+  .ad-wrap { margin: 28px 0; }
+  .ad-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--grey);
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .aff-card {
+    background: var(--white);
+    border: 1.5px solid var(--grey-border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .aff-card.featured { border-color: var(--gold); background: linear-gradient(135deg, var(--navy-dark), var(--navy)); }
+  .aff-card-text h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .aff-card.featured .aff-card-text h4 { color: var(--gold-light); }
+  .aff-card-text p { font-size: 13px; color: var(--grey); line-height: 1.5; }
+  .aff-card.featured .aff-card-text p { color: rgba(255,255,255,0.5); }
+  .aff-btn {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--white);
+    padding: 11px 22px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+    font-family: 'Lato', sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+  .aff-btn.gold { background: var(--gold); color: var(--navy-dark); }
+  .aff-btn.gold:hover { background: var(--gold-light); }
+  .aff-btn:hover { background: var(--navy-light); }
+  @media (max-width: 560px) {
+    .aff-card { flex-direction: column; }
+    .aff-btn { width: 100%; text-align: center; }
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar { display: flex; flex-direction: column; gap: 20px; }
+  .sw {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--grey-border);
+    overflow: hidden;
+  }
+  .sw-head {
+    background: var(--navy);
+    padding: 14px 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: var(--white);
+    font-weight: 600;
+    border-bottom: 2px solid var(--gold);
+  }
+  .sw-body { padding: 18px 20px; }
+  .limit-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--grey-border);
+    font-size: 14px;
+  }
+  .limit-row:last-child { border-bottom: none; }
+  .limit-yr { color: var(--grey); font-weight: 400; }
+  .limit-amt { font-weight: 700; color: var(--navy); font-family: 'Cormorant Garamond', serif; font-size: 16px; }
+  .limit-note { font-size: 11px; color: var(--grey); margin-top: 12px; line-height: 1.5; }
+
+  .cra-btn {
+    display: block;
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s;
+    margin-top: 4px;
+  }
+  .cra-btn:hover { background: var(--gold); color: var(--navy-dark); }
+
+  .sidebar-aff {
+    background: var(--navy-dark);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    text-align: center;
+    border: 1px solid var(--gold-border);
+  }
+  .sidebar-aff-badge {
+    display: inline-block;
+    background: var(--gold-muted);
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    border: 1px solid var(--gold-border);
+  }
+  .sidebar-aff-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .sidebar-aff-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.55; margin-bottom: 16px; }
+  .sidebar-aff-btn {
+    display: block;
+    background: var(--gold);
+    color: var(--navy-dark);
+    padding: 12px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 900;
+    text-decoration: none;
+    transition: background 0.2s;
+    letter-spacing: 0.03em;
+  }
+  .sidebar-aff-btn:hover { background: var(--gold-light); }
+
+  /* ── INFO CARDS ── */
+  .info-section {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+  }
+  .sec-head {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .sec-sub { font-size: 15px; color: var(--grey); margin-bottom: 32px; font-weight: 300; }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 700px) { .info-grid { grid-template-columns: 1fr; } }
+  .info-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--grey-border);
+    border-top: 3px solid var(--gold);
+  }
+  .info-icon { font-size: 30px; margin-bottom: 14px; display: block; }
+  .info-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+  .info-card p { font-size: 14px; color: var(--grey); line-height: 1.65; }
+
+  /* ── FAQ ── */
+  .faq-section {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+  }
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1.5px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .faq-item.open { border-color: var(--gold); }
+  .faq-q {
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 16px;
+    user-select: none;
+  }
+  .faq-q h3 { font-size: 15px; font-weight: 700; color: var(--navy); line-height: 1.4; }
+  .faq-chev {
+    width: 26px; height: 26px;
+    background: var(--cream);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s, background 0.2s;
+    font-size: 13px; color: var(--navy);
+  }
+  .faq-item.open .faq-chev { transform: rotate(180deg); background: var(--gold); color: var(--navy-dark); }
+  .faq-ans { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .faq-ans-inner {
+    padding: 0 22px 20px;
+    font-size: 14px; color: var(--grey); line-height: 1.75;
+    border-top: 1px solid var(--grey-border);
+    padding-top: 16px; margin: 0 22px;
+  }
+
+  /* ── NOTES ── */
+  .notes-section { background: var(--navy-dark); padding: 52px 24px; }
+  .notes-inner { max-width: 1120px; margin: 0 auto; }
+  .notes-inner .sec-head { color: var(--white); }
+  .notes-inner .sec-sub { color: rgba(255,255,255,0.45); }
+  .notes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  @media (max-width: 640px) { .notes-grid { grid-template-columns: 1fr; } }
+  .note-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+  }
+  .note-card h4 { font-size: 13px; font-weight: 700; color: var(--gold-light); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .note-card p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.65; }
+
+  /* ── CROSSLINK ── */
+  .crosslink-section { max-width: 1120px; margin: 0 auto; padding: 48px 24px; }
+  .crosslink-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 640px) { .crosslink-grid { grid-template-columns: 1fr; } }
+  .cl-card {
+    background: var(--white);
+    border: 1.5px solid var(--grey-border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: var(--shadow);
+    transition: border-color 0.2s;
+  }
+  .cl-card:hover { border-color: var(--gold); }
+  .cl-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--navy); font-weight: 700; }
+  .cl-card p { font-size: 14px; color: var(--grey); flex: 1; }
+  .cl-btn {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--white);
+    padding: 11px 22px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s;
+    align-self: flex-start;
+  }
+  .cl-btn:hover { background: var(--gold); color: var(--navy-dark); }
+
+  /* ── LEGAL ── */
+  .legal-section { background: var(--white); max-width: 1120px; margin: 0 auto; padding: 40px 24px; }
+  .legal-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--navy); margin-bottom: 12px; padding-top: 32px; border-top: 1.5px solid var(--grey-border); margin-top: 32px; }
+  .legal-section h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+  .legal-section p { font-size: 14px; color: var(--grey); line-height: 1.75; margin-bottom: 10px; }
+  .legal-section a { color: var(--gold); }
+
+  /* ── FOOTER ── */
+  .site-footer { background: #0A1020; padding: 48px 24px 24px; color: rgba(255,255,255,0.4); }
+  .footer-inner { max-width: 1120px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; gap: 24px; } }
+  .footer-brand p { margin-top: 12px; font-size: 13px; line-height: 1.65; }
+  .footer-col h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.6); margin-bottom: 14px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .footer-col ul li a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--gold-light); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 12px; }
+
+  /* updated tag */
+  .updated-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--success-bg); border: 1px solid #BBF7D0; color: var(--success); font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 28px; }
+  .upd-dot { width: 6px; height: 6px; background: #22C55E; border-radius: 50%; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="https://www.cppcalculation.ca/" class="logo">CPP<span>Calculation</span>.ca</a>
+    <span class="header-pill">Free Tool — 2026</span>
+  </div>
+</header>
+
+<!-- DISCLOSURE -->
+<div class="disclosure-bar">
+  <p>⚠️ <strong>Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a commission if you sign up with a partner — at no cost to you. This does not affect our content. <a href="#disclaimer">Learn more</a>.</p>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">🍁 Canada Pension Plan Tool</div>
+    <h1>Estimate Your <em>CPP Benefits</em><br>at 60, 65 or 70</h1>
+    <p class="hero-sub">Free Canada Pension Plan benefits calculator. Compare monthly payments across all three start ages, see your breakeven age, and make a confident retirement decision.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-value">$1,507</span>
+        <span class="hero-stat-label">Max Monthly 2026</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">−36%</span>
+        <span class="hero-stat-label">Early at Age 60</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">+42%</span>
+        <span class="hero-stat-label">Defer to Age 70</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<div class="main-wrap">
+  <main>
+    <div class="calc-card">
+      <div class="calc-header">
+        <h2>CPP Benefits Estimator</h2>
+        <p>Enter your details below to estimate your Canada Pension Plan monthly payment</p>
+      </div>
+      <div class="calc-body">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="birth-year">Year of Birth</label>
+            <input type="number" id="birth-year" placeholder="e.g. 1965" min="1940" max="2000">
+          </div>
+          <div class="form-group">
+            <label for="province">Province / Territory</label>
+            <select id="province">
+              <option value="AB">Alberta</option>
+              <option value="BC" selected>British Columbia</option>
+              <option value="MB">Manitoba</option>
+              <option value="NB">New Brunswick</option>
+              <option value="NL">Newfoundland & Labrador</option>
+              <option value="NS">Nova Scotia</option>
+              <option value="NT">Northwest Territories</option>
+              <option value="NU">Nunavut</option>
+              <option value="ON">Ontario</option>
+              <option value="PE">Prince Edward Island</option>
+              <option value="QC">Quebec</option>
+              <option value="SK">Saskatchewan</option>
+              <option value="YT">Yukon</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="avg-income">Average Annual Employment Income</label>
+            <div class="prefix-wrap">
+              <span class="pfx">$</span>
+              <input type="number" id="avg-income" placeholder="e.g. 65000" min="0" max="300000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contrib-years">Years of CPP Contributions</label>
+            <input type="number" id="contrib-years" placeholder="e.g. 35" min="1" max="47">
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-lbl">When do you plan to start CPP?</div>
+
+        <div class="scenario-toggle">
+          <div class="scenario-btn early active" onclick="setScenario('early',this)">
+            <span class="sb-age">60</span>
+            <span class="sb-label">Early Start</span>
+            <span class="sb-change">−36% penalty</span>
+          </div>
+          <div class="scenario-btn standard" onclick="setScenario('standard',this)">
+            <span class="sb-age">65</span>
+            <span class="sb-label">Standard Age</span>
+            <span class="sb-change">No adjustment</span>
+          </div>
+          <div class="scenario-btn defer" onclick="setScenario('defer',this)">
+            <span class="sb-age">70</span>
+            <span class="sb-label">Maximum Defer</span>
+            <span class="sb-change">+42% bonus</span>
+          </div>
+        </div>
+
+        <button class="calc-btn" onclick="calculate()">Calculate My CPP Estimate →</button>
+        <button class="reset-btn" onclick="resetCalc()">Reset Calculator</button>
+
+        <!-- RESULTS -->
+        <div class="results-wrap" id="results">
+          <hr class="divider">
+
+          <div class="alert alert-info" id="alert-info"></div>
+
+          <div class="section-lbl" style="margin-bottom:14px;">Your CPP Estimates — All Three Scenarios</div>
+          <div class="scenario-cards" id="scenario-cards"></div>
+
+          <div class="breakeven-box" id="breakeven-box">
+            <div class="breakeven-icon">⚖️</div>
+            <div class="breakeven-text">
+              <h4 id="breakeven-title">Breakeven Age</h4>
+              <p id="breakeven-desc"></p>
+            </div>
+          </div>
+
+          <div class="payout-section">
+            <div class="payout-title">Total Lifetime Payout Comparison</div>
+            <table class="payout-table">
+              <thead>
+                <tr>
+                  <th>Time Horizon</th>
+                  <th>Start at 60</th>
+                  <th>Start at 65</th>
+                  <th>Start at 70</th>
+                </tr>
+              </thead>
+              <tbody id="payout-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AFFILIATE SLOT 1 — Below calculator results -->
+    <div class="ad-wrap">
+      <div class="ad-label">Advertisement</div>
+      <!-- ============================================================
+           AFFILIATE SLOT 1 — Below Calculator Results
+           TO ACTIVATE: Replace the .aff-card block below with your
+           Wealthsimple affiliate banner code.
+           Update href="https://wealthsimple.com/invite/9BVNUA" to your
+           real Wealthsimple affiliate URL.
+           ============================================================ -->
+      <div class="aff-card featured">
+        <div class="aff-card-text">
+          <h4>Invest Your CPP Gap with Wealthsimple</h4>
+          <p>CPP covers part of retirement — your investments cover the rest. Start a RRSP, TFSA or FHSA with Canada's most trusted commission-free platform.</p>
+        </div>
+        <a href="https://wealthsimple.com/invite/9BVNUA" target="_blank" rel="noopener sponsored" class="aff-btn gold">Start Investing Free →</a>
+      </div>
+      <!-- END AFFILIATE SLOT 1 -->
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sw">
+      <div class="sw-head">📊 Max CPP Payments</div>
+      <div class="sw-body">
+        <!-- ============================================================
+             UPDATE EACH YEAR: Add new row when Service Canada announces
+             new maximum CPP amounts. Format: year | at-65 monthly max
+             ============================================================ -->
+        <div class="limit-row">
+          <span class="limit-yr">2024 (age 65)</span>
+          <span class="limit-amt">$1,364.60</span>
+        </div>
+        <div class="limit-row">
+          <span class="limit-yr">2025 (age 65)</span>
+          <span class="limit-amt">$1,433.00</span>
+        </div>
+        <div class="limit-row">
+          <span class="limit-yr">2026 (age 65)</span>
+          <span class="limit-amt">$1,507.65</span>
+        </div>
+        <div class="limit-row">
+          <span class="limit-yr">Average (2026)</span>
+          <span class="limit-amt">~$925/mo</span>
+        </div>
+        <p class="limit-note">Most Canadians receive well below the maximum. Your actual amount depends on your full earnings history.</p>
+      </div>
+    </div>
+
+    <div class="sw">
+      <div class="sw-head">🏛️ Check with Service Canada</div>
+      <div class="sw-body">
+        <p style="font-size:13px;color:var(--grey);line-height:1.6;margin-bottom:14px;">Get your personalized CPP Statement of Contributions from My Service Canada Account — the only source of your official estimate.</p>
+        <a href="https://www.canada.ca/en/employment-social-development/services/my-account.html" target="_blank" rel="noopener" class="cra-btn">My Service Canada Account →</a>
+      </div>
+    </div>
+
+    <!-- AFFILIATE SLOT 2 — Sidebar -->
+    <!-- ============================================================
+         AFFILIATE SLOT 2 — Sidebar
+         TO ACTIVATE: Replace the .sidebar-aff block below with your
+         Moomoo Canada affiliate banner code.
+         Update href="https://track.flexlinkspro.com/g.ashx?foid=156074.24631.2138388&trid=1251118.239600&foc=16&fot=9999&fos=6" to your real link.
+         ============================================================ -->
+    <div class="sidebar-aff">
+      <div class="sidebar-aff-badge">Featured Partner</div>
+      <div class="sidebar-aff-title">Moomoo Canada</div>
+      <div class="sidebar-aff-desc">Commission-free stock and ETF trading. Grow your retirement savings with professional tools and real-time data — no commissions ever.</div>
+      <a href="https://track.flexlinkspro.com/g.ashx?foid=156074.24631.2138388&trid=1251118.239600&foc=16&fot=9999&fos=6" target="_blank" rel="noopener sponsored" class="sidebar-aff-btn">Open a Free Account →</a>
+    </div>
+    <!-- END AFFILIATE SLOT 2 -->
+
+  </aside>
+</div>
+
+<!-- AFFILIATE SLOT 3 — Above FAQ -->
+<div style="max-width:1120px;margin:0 auto;padding:0 24px 8px;">
+  <div class="ad-label">Advertisement</div>
+  <!-- ============================================================
+       AFFILIATE SLOT 3 — Above FAQ Section
+       TO ACTIVATE: Replace the .aff-card block below with your
+       Wealthsimple or Moomoo affiliate banner code.
+       Update href to your real affiliate link.
+       ============================================================ -->
+  <div class="aff-card">
+    <div class="aff-card-text">
+      <h4>Wealthsimple — Canada's Leading Investment Platform</h4>
+      <p>RRSP, TFSA, FHSA and non-registered accounts. Commission-free stocks and ETFs. Trusted by over 3 million Canadians.</p>
+    </div>
+    <a href="https://wealthsimple.com/invite/9BVNUA" target="_blank" rel="noopener sponsored" class="aff-btn">Get Started Free →</a>
+  </div>
+  <!-- END AFFILIATE SLOT 3 -->
+</div>
+
+<!-- WHAT IS CPP -->
+<section class="info-section" style="padding-top:48px;">
+  <div class="updated-tag"><span class="upd-dot"></span> Last Updated: January 2026</div>
+  <h2 class="sec-head">What Is the Canada Pension Plan?</h2>
+  <p class="sec-sub">The CPP is Canada's contributory, earnings-related social insurance program — here is how it works.</p>
+  <div class="info-grid">
+    <div class="info-card">
+      <span class="info-icon">🇨🇦</span>
+      <h3>How CPP Works</h3>
+      <p>The Canada Pension Plan is a mandatory retirement program for most employed Canadians. Both you and your employer contribute a percentage of your earnings to the CPP each year. The contributions you make throughout your working life determine how much you receive in retirement.</p>
+    </div>
+    <div class="info-card">
+      <span class="info-icon">✅</span>
+      <h3>Who Qualifies</h3>
+      <p>Any Canadian worker aged 18–70 who earns more than the Year's Basic Exemption ($3,500 in 2026) contributes to CPP and qualifies for benefits. Self-employed Canadians pay both the employee and employer share. Quebec residents contribute to the QPP instead of CPP.</p>
+    </div>
+    <div class="info-card">
+      <span class="info-icon">📈</span>
+      <h3>How Contribution Years Affect Your Payment</h3>
+      <p>The more years you contributed at or near the maximum, the higher your CPP payment. The maximum benefit requires approximately 39 years of maximum contributions. Dropout provisions protect years of low or no earnings due to raising children under 7 or disability.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <h2 class="sec-head">Frequently Asked Questions</h2>
+  <p class="sec-sub">Common questions about CPP timing, amounts, and retirement strategy.</p>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <h3>Is it better to take CPP at 60 or 65?</h3>
+        <div class="faq-chev">▾</div>
+      </div>
+      <div class="faq-ans"><div class="faq-ans-inner">Taking CPP at 60 gives you more payments over your lifetime but each payment is permanently reduced by 36% compared to taking it at 65. The right choice depends on your health, other retirement income, and financial needs. If you are in poor health or need the income now, taking CPP early can make sense. If you are healthy and have other income to draw from, waiting until 65 or even 70 typically results in more total lifetime income — especially if you live past your early 80s.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <h3>How much CPP will I get at 65 in Canada?</h3>
+        <div class="faq-chev">▾</div>
+      </div>
+      <div class="faq-ans"><div class="faq-ans-inner">The maximum CPP retirement benefit at age 65 in 2026 is $1,507.65 per month. However, the average Canadian receives approximately $925 per month because receiving the maximum requires contributing the maximum amount for roughly 39 years. Your personal amount depends entirely on your earnings history and contribution years. Log into My Service Canada Account for your official personalized estimate.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <h3>What is the CPP deferral breakeven age?</h3>
+        <div class="faq-chev">▾</div>
+      </div>
+      <div class="faq-ans"><div class="faq-ans-inner">The breakeven age between taking CPP at 65 vs deferring to 70 is approximately age 82 to 83. This means if you live past roughly age 83, you will receive more total lifetime CPP income by waiting until 70. If you pass away before the breakeven age, you would have received more by starting earlier. The breakeven between taking CPP at 60 vs 65 is typically around age 74 to 75. Your health and family history are important factors in this decision.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <h3>What is the CPP early retirement penalty?</h3>
+        <div class="faq-chev">▾</div>
+      </div>
+      <div class="faq-ans"><div class="faq-ans-inner">Taking CPP before age 65 permanently reduces your monthly benefit by 0.6% for each month before your 65th birthday. Starting at exactly age 60 results in the maximum reduction of 36% (0.6% × 60 months). Starting at age 62 reduces your benefit by 21.6%. Starting at age 64 reduces it by 7.2%. This reduction is permanent — it does not reverse when you turn 65. Your CPP amount is locked in at whatever rate applied when you first started collecting.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <h3>What is the CPP deferral bonus?</h3>
+        <div class="faq-chev">▾</div>
+      </div>
+      <div class="faq-ans"><div class="faq-ans-inner">Delaying CPP past age 65 increases your monthly benefit by 0.7% for each month you wait. Deferring to the maximum age of 70 increases your CPP by 42% permanently (0.7% × 60 months). This means if your age-65 CPP would be $800 per month, deferring to 70 would give you $1,136 per month for life — a significant difference especially if you live into your late 80s or 90s.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <h3>How many years do I need to contribute to get the maximum CPP?</h3>
+        <div class="faq-chev">▾</div>
+      </div>
+      <div class="faq-ans"><div class="faq-ans-inner">To receive the maximum CPP at age 65, you generally need approximately 39 years of maximum contributions between ages 18 and 65. Years with low or no earnings, periods raising children under age 7, or disability years can be excluded from your calculation through CPP dropout provisions — which can improve your average and increase your benefit. Most Canadians do not achieve the maximum due to career gaps, part-time work, or periods of self-employment.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <h3>Can I collect CPP and still work?</h3>
+        <div class="faq-chev">▾</div>
+      </div>
+      <div class="faq-ans"><div class="faq-ans-inner">Yes — you can collect CPP and continue working at any age between 60 and 70. If you are between 60 and 65 and collecting CPP while working, CPP contributions are mandatory. Between ages 65 and 70, contributions are optional — you can choose to make Post-Retirement Benefit (PRB) contributions which will slightly increase your monthly CPP each year. After age 70, CPP contributions are no longer permitted regardless of whether you are still working.</div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NOTES -->
+<section class="notes-section">
+  <div class="notes-inner">
+    <h2 class="sec-head" style="color:white;">Important Notes & How to Use This Tool</h2>
+    <p class="sec-sub">Please read before relying on your CPP estimates</p>
+    <div class="notes-grid">
+      <div class="note-card">
+        <h4>📌 Estimates Only — Not Official</h4>
+        <p>This calculator provides approximate CPP benefit estimates based on publicly available Service Canada formulas. Your actual CPP amount can only be confirmed through My Service Canada Account or by calling Service Canada at 1-800-277-9914.</p>
+      </div>
+      <div class="note-card">
+        <h4>📌 Full History Required for Accuracy</h4>
+        <p>Actual CPP amounts depend on your complete earnings record going back to age 18. This calculator uses your average income and contribution years as inputs — Service Canada uses your full year-by-year earnings history, which is more precise.</p>
+      </div>
+      <div class="note-card">
+        <h4>📌 CPP Enhancement</h4>
+        <p>Since 2019 Canada has been phasing in CPP enhancement. Workers contributing after 2019 will receive higher CPP benefits reflecting enhanced contributions. This calculator applies 2026 rules and may not fully reflect enhancement for younger workers.</p>
+      </div>
+      <div class="note-card">
+        <h4>📌 Quebec Residents</h4>
+        <p>Quebec residents contribute to the Quebec Pension Plan (QPP) rather than CPP. QPP rules and benefit amounts are similar but administered separately by Retraite Québec. This calculator is designed for CPP recipients outside of Quebec.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CROSSLINKS -->
+<section class="crosslink-section">
+  <h2 class="sec-head">More Free Canadian Financial Tools</h2>
+  <p class="sec-sub">Part of a network of free Canadian retirement and savings calculators.</p>
+  <div class="crosslink-grid">
+    <div class="cl-card">
+      <h3>TFSA Contribution Room Calculator</h3>
+      <p>Calculate your exact Tax-Free Savings Account contribution room for 2026, including carryforward from previous years.</p>
+      <a href="https://www.tfsaroomcalculator.ca/" target="_blank" rel="noopener" class="cl-btn">TFSA Calculator →</a>
+    </div>
+    <div class="cl-card">
+      <h3>FHSA Contribution Room Calculator</h3>
+      <p>Calculate your First Home Savings Account contribution room, carryforward, lifetime limit and projected tax deduction.</p>
+      <a href="https://www.fhsacalculator.ca/" target="_blank" rel="noopener" class="cl-btn">FHSA Calculator →</a>
+    </div>
+  </div>
+</section>
+
+<!-- LEGAL -->
+<div class="legal-section" id="disclaimer">
+  <h2>Disclaimer</h2>
+  <p>The CPP Benefits Estimator at cppcalculation.ca is provided for general informational and educational purposes only. Results are estimates based on publicly available Service Canada CPP formulas and should not be construed as financial, legal, or retirement planning advice. Actual CPP amounts depend on your full individual earnings history which only Service Canada has access to. We make no representations or warranties about the accuracy or completeness of estimates provided.</p>
+  <p>Always verify your CPP entitlement through My Service Canada Account or by contacting Service Canada directly before making retirement decisions. Consult a qualified financial advisor for personalized retirement planning advice.</p>
+
+  <h2>Privacy Policy</h2>
+  <p>cppcalculation.ca does not collect, store, or transmit any personal or financial data you enter into this calculator. All calculations are performed locally in your browser and no data is sent to any server.</p>
+  <p>This website uses Google AdSense to display advertisements. Google may use cookies to serve ads based on your prior visits to this and other websites. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>. This site also participates in affiliate programs — see our disclosure above.</p>
+  <p>Questions or concerns: <a href="mailto:hello@cppcalculation.ca">hello@cppcalculation.ca</a></p>
+
+  <h2>Terms of Use</h2>
+  <p>By using this website you agree that cppcalculation.ca and its operators are not liable for any errors, omissions, or decisions made based on the estimates provided. This tool is provided "as is" without warranty of any kind. Use entirely at your own risk. Content is copyright cppcalculation.ca and may not be reproduced without written permission.</p>
+
+  <h2>Contact</h2>
+  <p>Feedback, corrections, or questions: <a href="mailto:hello@cppcalculation.ca">hello@cppcalculation.ca</a></p>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="https://www.cppcalculation.ca/" class="logo" style="font-family:'Cormorant Garamond',serif;font-size:22px;">CPP<span style="color:var(--gold)">Calculation</span>.ca</a>
+        <p>A free Canadian tool to help workers and retirees estimate their Canada Pension Plan benefits. For reference only — always verify with Service Canada.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Our Tools</h4>
+        <ul>
+          <li><a href="https://www.cppcalculation.ca/">CPP Calculator</a></li>
+          <li><a href="https://www.tfsaroomcalculator.ca/" target="_blank" rel="noopener">TFSA Calculator</a></li>
+          <li><a href="https://www.fhsacalculator.ca/" target="_blank" rel="noopener">FHSA Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#disclaimer">Disclaimer</a></li>
+          <li><a href="#disclaimer">Privacy Policy</a></li>
+          <li><a href="#disclaimer">Terms of Use</a></li>
+          <li><a href="#disclaimer">Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 cppcalculation.ca — For reference only. Not affiliated with Service Canada or the Government of Canada.</p>
+      <p>Built for Canadians 🍁</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// CPP CALCULATION CONSTANTS — UPDATE ANNUALLY
+// When Service Canada announces new maximums, update these values.
+// ============================================================
+const CPP_MAX_2026 = 1507.65;       // Maximum CPP at age 65 — UPDATE EACH YEAR
+const CPP_AVERAGE_2026 = 925.35;    // Average CPP at age 65 — UPDATE EACH YEAR
+const YMPE_2026 = 74600;            // Year's Maximum Pensionable Earnings — UPDATE EACH YEAR
+const YBE = 3500;                   // Year's Basic Exemption (stable — update if CRA changes)
+const EARLY_REDUCTION = 0.006;      // 0.6% per month before 65 — update if rules change
+const DEFER_INCREASE = 0.007;       // 0.7% per month after 65 — update if rules change
+const MAX_CONTRIB_YEARS = 39;       // Years needed for maximum benefit
+const CURRENT_YEAR = 2026;         // UPDATE EACH YEAR
+// ============================================================
+
+let selectedScenario = 'early';
+
+function setScenario(s, el) {
+  selectedScenario = s;
+  document.querySelectorAll('.scenario-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function fmt(n) {
+  return '$' + Math.abs(n).toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+function fmtK(n) {
+  return '$' + Math.round(Math.abs(n)).toLocaleString('en-CA');
+}
+
+function estimateCPP(avgIncome, contribYears) {
+  // Estimate CPP at age 65 based on average income and contribution years
+  // This is an approximation — actual CPP requires full earnings history
+  const cappedIncome = Math.min(avgIncome, YMPE_2026);
+  const pensionableEarnings = Math.max(0, cappedIncome - YBE);
+  const earningsRatio = pensionableEarnings / (YMPE_2026 - YBE);
+  const yearsRatio = Math.min(contribYears, MAX_CONTRIB_YEARS) / MAX_CONTRIB_YEARS;
+  const estimated = CPP_MAX_2026 * earningsRatio * yearsRatio;
+  return Math.min(Math.max(estimated, 0), CPP_MAX_2026);
+}
+
+function calculate() {
+  const birthYear = parseInt(document.getElementById('birth-year').value);
+  const avgIncome = parseFloat(document.getElementById('avg-income').value) || 0;
+  const contribYears = parseInt(document.getElementById('contrib-years').value) || 0;
+
+  if (!birthYear || birthYear < 1940 || birthYear > 2000) {
+    alert('Please enter a valid birth year between 1940 and 2000.');
+    return;
+  }
+  if (avgIncome <= 0) {
+    alert('Please enter your average annual employment income.');
+    return;
+  }
+  if (contribYears <= 0 || contribYears > 47) {
+    alert('Please enter a valid number of CPP contribution years (1–47).');
+    return;
+  }
+
+  const baseAt65 = estimateCPP(avgIncome, contribYears);
+
+  // Early at 60: -36% (60 months × 0.6%)
+  const at60 = baseAt65 * (1 - (EARLY_REDUCTION * 60));
+  // Standard at 65
+  const at65 = baseAt65;
+  // Defer to 70: +42% (60 months × 0.7%)
+  const at70 = baseAt65 * (1 + (DEFER_INCREASE * 60));
+
+  // Annual amounts
+  const annual60 = at60 * 12;
+  const annual65 = at65 * 12;
+  const annual70 = at70 * 12;
+
+  // Breakeven: age at which deferring to 70 beats taking at 65
+  // Cumulative at 65 after n years = at65 * 12 * n
+  // Cumulative at 70 after (n-5) years of payments = at70 * 12 * (n-5)
+  // Solve: at65 * 12 * n = at70 * 12 * (n-5)
+  // n * at65 = (n-5) * at70  →  n(at65 - at70) = -5*at70  →  n = 5*at70 / (at70 - at65)
+  const breakeven65v70Years = (5 * at70) / (at70 - at65);
+  const breakevenAge65v70 = Math.round(65 + breakeven65v70Years);
+
+  // Breakeven 60 vs 65
+  // at60 * 12 * (n+5) = at65 * 12 * n  →  n(at60 - at65) = -5*at60  →  n = 5*at60 / (at65 - at60)
+  const breakeven60v65Years = (5 * at60) / (at65 - at60);
+  const breakevenAge60v65 = Math.round(65 + breakeven60v65Years);
+
+  // Show results
+  document.getElementById('results').classList.add('visible');
+
+  // Alert
+  const alertEl = document.getElementById('alert-info');
+  alertEl.className = 'alert alert-info show';
+  alertEl.innerHTML = `<strong>📌 Estimate based on your inputs.</strong> This is an approximation. Your actual CPP depends on your full year-by-year earnings history held by Service Canada. Log into <a href="https://www.canada.ca/en/employment-social-development/services/my-account.html" target="_blank" rel="noopener">My Service Canada Account</a> for your official personalized estimate.`;
+
+  // Scenario cards
+  const best = Math.max(at60, at65, at70);
+  const cards = document.getElementById('scenario-cards');
+  cards.innerHTML = `
+    <div class="scenario-card ${at60 === best ? 'best' : ''}">
+      <span class="sc-badge">Start at 60</span>
+      <span class="sc-age">60</span>
+      <span class="sc-age-label">Early Retirement</span>
+      <span class="sc-monthly">${fmt(at60)}</span>
+      <span class="sc-monthly-label">per month</span>
+      <div class="sc-annual">${fmtK(annual60)} / year</div>
+      <div class="sc-change-pill red">−36% from age-65 amount</div>
+    </div>
+    <div class="scenario-card ${at65 === best ? 'best' : ''}">
+      <span class="sc-badge">Start at 65</span>
+      <span class="sc-age">65</span>
+      <span class="sc-age-label">Standard Age</span>
+      <span class="sc-monthly">${fmt(at65)}</span>
+      <span class="sc-monthly-label">per month</span>
+      <div class="sc-annual">${fmtK(annual65)} / year</div>
+      <div class="sc-change-pill neutral">No adjustment</div>
+    </div>
+    <div class="scenario-card ${at70 === best ? 'best' : ''}">
+      <span class="sc-badge">Start at 70</span>
+      <span class="sc-age">70</span>
+      <span class="sc-age-label">Maximum Deferral</span>
+      <span class="sc-monthly">${fmt(at70)}</span>
+      <span class="sc-monthly-label">per month</span>
+      <div class="sc-annual">${fmtK(annual70)} / year</div>
+      <div class="sc-change-pill blue">+42% from age-65 amount</div>
+    </div>
+  `;
+
+  // Breakeven box
+  document.getElementById('breakeven-title').textContent = `Breakeven Age: 65 vs 70 = Age ${breakevenAge65v70}`;
+  document.getElementById('breakeven-desc').textContent =
+    `If you defer CPP to age 70 instead of starting at 65, you will break even at approximately age ${breakevenAge65v70}. After that age, deferring to 70 results in more total lifetime CPP income. The breakeven between starting at age 60 vs 65 is approximately age ${breakevenAge60v65}.`;
+
+  // Payout table
+  const horizons = [
+    { label: '10 years', years60: 10, years65: 5, years70: 0 },
+    { label: '15 years', years60: 15, years65: 10, years70: 5 },
+    { label: '20 years', years60: 20, years65: 15, years70: 10 },
+    { label: '25 years', years60: 25, years65: 20, years70: 15 },
+    { label: '30 years', years60: 30, years65: 25, years70: 20 },
+  ];
+
+  const tbody = document.getElementById('payout-body');
+  tbody.innerHTML = '';
+  horizons.forEach(h => {
+    const t60 = at60 * 12 * h.years60;
+    const t65 = at65 * 12 * h.years65;
+    const t70 = at70 * 12 * h.years70;
+    const maxVal = Math.max(t60, t65, t70);
+    tbody.innerHTML += `<tr>
+      <td class="highlight-col">From age 60<br><small style="font-weight:400;color:var(--grey);">(${h.label} of payments)</small></td>
+      <td class="${t60 === maxVal ? 'winner' : ''}">${fmtK(t60)}</td>
+      <td class="${t65 === maxVal ? 'winner' : ''}">${fmtK(t65)}</td>
+      <td class="${t70 === maxVal ? 'winner' : ''}">${fmtK(t70)}</td>
+    </tr>`;
+  });
+
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function resetCalc() {
+  document.getElementById('birth-year').value = '';
+  document.getElementById('avg-income').value = '';
+  document.getElementById('contrib-years').value = '';
+  document.getElementById('results').classList.remove('visible');
+  document.querySelectorAll('.scenario-btn').forEach((b, i) => {
+    b.classList.toggle('active', i === 0);
+  });
+  selectedScenario = 'early';
+}
+
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const ans = item.querySelector('.faq-ans');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-ans').style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    ans.style.maxHeight = ans.scrollHeight + 40 + 'px';
+  }
+}
+</script>
+</body>
+</html>
