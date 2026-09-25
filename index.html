@@ -1734,28 +1734,65 @@ function toggleFaq(el) {
     }
   });
 
-  // Mobile fallback: no mouse, so use a time + scroll based proxy.
-  // Only fires if the visitor has scrolled (shown some engagement)
-  // and stayed at least 25 seconds, then attach a one-time
-  // "about to switch tabs / minimize" signal via visibility change,
-  // plus a generous idle timer as a backstop.
+  // Mobile exit-intent: mobile browsers have no mouse to track, so we
+  // combine several touch-friendly signals instead of relying on one.
   let hasScrolled = false;
+  let maxScrollPct = 0;
+  let lastScrollY = window.scrollY;
+  let scrollUpStreak = 0;
+
+  function scrollPercent() {
+    const doc = document.documentElement;
+    const scrollable = (doc.scrollHeight - doc.clientHeight);
+    if (scrollable <= 0) return 0;
+    return (window.scrollY / scrollable) * 100;
+  }
+
   window.addEventListener('scroll', function () {
     hasScrolled = true;
+    const pct = scrollPercent();
+    if (pct > maxScrollPct) maxScrollPct = pct;
+
+    // Signal 1: rapid upward scroll back toward the top after the
+    // visitor has already engaged with a good chunk of the page.
+    // On mobile this "flick back up" almost always precedes tapping
+    // the back button, closing the tab, or reaching for the address
+    // bar — the closest mobile equivalent of a cursor leaving the page.
+    const currentY = window.scrollY;
+    if (currentY < lastScrollY) {
+      scrollUpStreak += (lastScrollY - currentY);
+    } else {
+      scrollUpStreak = 0;
+    }
+    lastScrollY = currentY;
+
+    if (maxScrollPct >= 30 && currentY < 150 && scrollUpStreak > 250) {
+      showPopup();
+    }
   }, { passive: true });
 
+  // Signal 2: tab backgrounded (switching apps, closing tab, locking
+  // screen) after the visitor has scrolled at all.
   document.addEventListener('visibilitychange', function () {
     if (document.hidden && hasScrolled) {
       showPopup();
     }
   });
 
-  // Backstop for mobile visitors who never background the tab:
-  // show once after 45s of dwell time if they've scrolled (engaged)
-  // but haven't converted.
-  setTimeout(function () {
+  // Signal 3: pagehide fires on mobile Safari/Chrome in cases where
+  // visibilitychange doesn't (e.g. swiping away, some back-button
+  // flows). Kept as a same-tick best-effort trigger.
+  window.addEventListener('pagehide', function () {
     if (hasScrolled) showPopup();
-  }, 45000);
+  });
+
+  // Backstop: if a visitor has scrolled through a meaningful chunk of
+  // the page but has shown no exit signal after 30s, show it anyway
+  // so mobile visitors who read slowly and never trigger the above
+  // still see the offer once.
+  setTimeout(function () {
+    if (maxScrollPct >= 30) showPopup();
+  }, 30000);
 
   closeBtn.addEventListener('click', hidePopup);
   noThanksBtn.addEventListener('click', hidePopup);
